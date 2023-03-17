@@ -1,0 +1,19 @@
+{
+  "name": "Reddit Subreddit Redirect",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Automatically redirects to a specific subreddit on Reddit.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
